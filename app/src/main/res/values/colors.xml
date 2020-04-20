@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2272c7</color>
+    <color name="colorPrimaryDark">#013369</color>
+    <color name="colorAccent">#D50A0A</color>
+    <color name="myred">#e3342f</color>
+    <color name="mygreen">#38c172</color>
+
+    <color name="bears">#C83803</color>
+    <color name="packers">#203731</color>
+    <color name="panthers">#0085CA</color>
+    <color name="rams">#002244</color>
+</resources>
