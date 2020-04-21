@@ -98,9 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             createDatabase();
         }
     }
-
-
-    //Test
+    
 
     public void createDatabase(){
         SQLiteDatabase database = openOrCreateDatabase(databaseName, MODE_PRIVATE, null);
