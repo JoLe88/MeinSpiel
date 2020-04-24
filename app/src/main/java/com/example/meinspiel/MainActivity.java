@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     final String prefNameFirstStart = "firstAppStart";
     final ArrayList<String> allUsedGames = new ArrayList<String>(256);
     final String prefGame = "currantGame";
-    final int maxLevel = 2;
+    final int maxLevel = 54;
 
     String date, romannumber, hometeam, awayteam, homescore, awayscore;
     String currantGame;
@@ -195,12 +195,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         Random rand = new Random();
-        int x = rand.nextInt(2);
+        int x = rand.nextInt(54);
         x++;
 
         if(numberOfPlayedGames<2) {
             while (allUsedGames.contains(Integer.toString(x))) {
-                x = rand.nextInt(2);
+                x = rand.nextInt(54);
                 x++;
             }
         }
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        if(numberOfPlayedGames<2) {
+        if(numberOfPlayedGames<54) {
             SQLiteDatabase database = openOrCreateDatabase(databaseName, MODE_PRIVATE, null);
             Cursor cursor = database.rawQuery("SELECT * FROM " + databaseTableName + " WHERE id = '" + /*String.valueOf(*/ currantGame + "'", null);
             cursor.moveToNext();
