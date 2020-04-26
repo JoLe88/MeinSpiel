@@ -196,12 +196,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         Random rand = new Random();
-        int x = rand.nextInt(2);
+        int x = rand.nextInt(maxLevel);
         x++;
 
-        if(numberOfPlayedGames<2) {
+        if(numberOfPlayedGames<maxLevel) {
             while (allUsedGames.contains(Integer.toString(x))) {
-                x = rand.nextInt(2);
+                x = rand.nextInt(maxLevel);
                 x++;
             }
         }
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         currantGame = Integer.toString(x);
 
 
-        if (numberOfPlayedGames < 2) {
+        if (numberOfPlayedGames < maxLevel) {
             SQLiteDatabase database = openOrCreateDatabase(databaseName, MODE_PRIVATE, null);
             Cursor cursor = database.rawQuery("SELECT * FROM " + databaseTableName + " WHERE id = '" + /*String.valueOf(*/ currantGame + "'", null);
             cursor.moveToNext();
