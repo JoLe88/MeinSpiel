@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
             cursor.close();
-            testAusgabe();
+            //testAusgabe();
             //Toast.makeText(this, Integer.toString(x),Toast.LENGTH_LONG).show();
 
         }else {
