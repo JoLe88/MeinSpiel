@@ -244,7 +244,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //Toast.makeText(this, Integer.toString(x),Toast.LENGTH_LONG).show();
 
         }else {
-            Toast.makeText(this,"DU hast ALLE spiele durch! Danke fürs Spielen! :)",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"DU hast ALLE spiele durch! Danke fürs Spielen! Toll gemacht!",Toast.LENGTH_LONG).show();
             //testEinsetzen(); // muss dann weg
         }
     }
