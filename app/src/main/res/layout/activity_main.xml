@@ -12,37 +12,69 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageViewObenShadow"
+            android:layout_width="wrap_content"
+            android:layout_height="370dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageViewAorN"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/oben_shadow"
+            tools:layout_editor_absoluteX="0dp" />
+
         <TextView
             android:id="@+id/textViewDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
             android:fontFamily="@font/graduate"
             android:gravity="center_horizontal"
             android:text="tt.mm.yyyy"
             android:textColor="#808080"
             android:textSize="30sp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="119dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewObenShadow"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/imageViewSuperBowl"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageViewObenShadow"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSuperBowl" />
 
         <TextView
-            android:id="@+id/textViewSuperbowl"
+            android:id="@+id/textViewSuperBowl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="40dp"
             android:fontFamily="@font/graduate"
             android:gravity="center_horizontal"
             android:text="Super Bowl"
             android:textColor="#808080"
             android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/imageViewAorN"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_marginBottom="8dp"
+            android:alpha=".10"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:srcCompat="@drawable/afcnfc"
             tools:layout_editor_absoluteX="0dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="531dp">
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp">
 
             <ImageView
                 android:id="@+id/bg_home"

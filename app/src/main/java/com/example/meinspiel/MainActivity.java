@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //android:background="@drawable/packers_bg"
     ImageView bg_away, bg_home;
 
-    ImageView nfl100Logo, backgroundCorrect, backgroundWrong, backgroundSkip;
+    ImageView nfl100Logo, backgroundCorrect, backgroundWrong, backgroundSkip, imageViewSuperBowl;
     ImageButton imageButtonAway, imageButtonHome;
-    TextView textViewAway, textViewHome, textViewDate, textViewAwayscore, textViewColon, textViewHomescore, textViewAt;
+    TextView textViewAway, textViewHome, textViewDate, textViewAwayscore, textViewColon, textViewHomescore, textViewAt, textViewSuperBowl;
     Button skipButton;
 
     LottieAnimationView av_correct;
@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bg_home = findViewById(R.id.bg_home);
         textViewAway = findViewById(R.id.textViewAway);
         textViewHome = findViewById(R.id.textViewHome);
+        imageViewSuperBowl = findViewById(R.id.imageViewSuperBowl);
+        textViewSuperBowl = findViewById(R.id.textViewSuperBowl);
         //textViewAwayscore = findViewById(R.id.textViewAwayscore);
         //textViewColon = findViewById(R.id.textViewColon);
         //textViewHomescore = findViewById(R.id.textViewHomescore);
@@ -84,8 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageButtonHome.setOnClickListener(this);
         skipButton.setOnClickListener(this);
 
-        createDatabase();
-        //firstAppStart(); //createDatabase() inside
+        //createDatabase();
+        firstAppStart(); //createDatabase() inside
         testEinsetzen(); //setAllUsedGames() inside
         //safeLevel();
     }
@@ -224,13 +226,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             textViewDate.setText(date);
             textViewHome.setText(hometeam);
             textViewAway.setText(awayteam);
+            String sbtext = "Super Bowl " + romannumber;
+            textViewSuperBowl.setText(sbtext);
             //textViewHomescore.setText(homescore);
             //textViewAwayscore.setText(awayscore);
 
             //textViewAwayscore.setTextSize(70);
             //textViewHomescore.setTextSize(70);
 
-
+            setSuperBowlLogo();
             setLogos();
             setBackgrounds();
 
@@ -373,6 +377,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String teamnameHome = hometeam.toLowerCase() + "_bg";
         int logoID2 = getResources().getIdentifier(teamnameHome, "drawable", getPackageName());
         bg_home.setImageResource(logoID2);
+    }
+
+    public void setSuperBowlLogo(){
+        String sbLogo = "sb_" + romannumber.toLowerCase();
+        int logoID1 = getResources().getIdentifier(sbLogo, "drawable", getPackageName());
+        imageViewSuperBowl.setImageResource(logoID1);
     }
 
     public void makeScoreVisible(String a, String h){
